@@ -12,7 +12,7 @@ import './index.css'
 
 
 // Index
-const Index = () => (
+const Index = props => (
 	<div className="index">
 
 		<p>Test</p>
