@@ -8,5 +8,21 @@ body {
 	body, h1, h2, h3, h4, h5 h6, p, i, a, bold, span, strong, div, section, nav, aside {
 		font-family: 'Roboto', sans-serif;
 		text-decoration: none;
+		font-weight: 400;
 		color: #333;
 		margin: 0; }
+
+.index {
+	position: relative;
+	height: 100vh;
+	width: 100vw;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: left; }
+	.index .page {
+		position: absolute;
+		top: 10vh;
+		padding: 20px;
+		left: 0;
+		right: 0;
+		height: 90vh; }

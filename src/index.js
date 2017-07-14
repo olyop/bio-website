@@ -8,17 +8,32 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap/dist/css/bootstrap-theme.css'
 import './index.css'
 
-// Import Components
+// Import React Router
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
+// Import Components
+import Header from './header/header'
+import Jumbotron from './jumbotron/jumbotron'
 
 // Index
 const Index = props => (
-	<div className="index">
+	<Router>
+		<div className="index">
 
-		<h1>Test</h1>
-		<i className="material-icons">done</i>
+			<Header />
 
-	</div>
+			<Switch>
+				
+				<Route path="/" exact render={ ({ match }) => <Jumbotron /> } />
+				<Route path="/websites" exact
+					render={ ({ match }) => <div className="container page">Websites</div> } />
+				
+				<Route render={ ({ match }) => <div className="container page">Error 404 - page not found</div> } />
+				
+			</Switch>
+
+		</div>
+	</Router>
 )
 
 // Render to DOM
