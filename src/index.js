@@ -15,7 +15,8 @@ import './index.css'
 const Index = props => (
 	<div className="index">
 
-		<p>Test</p>
+		<h1>Test</h1>
+		<i className="material-icons">done</i>
 
 	</div>
 )
