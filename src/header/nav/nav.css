@@ -39,4 +39,5 @@
 			.nav ul li a.nav-home {
 				text-decoration: none !important;
 				padding: 10px;
+        background-color: transparent;
 				border-radius: 100%; }

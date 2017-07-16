@@ -24,7 +24,7 @@ const Index = props => (
 
 			<Switch>
 				
-				<Route path="/" exact render={ ({ match }) => <Jumbotron /> } />
+				<Route path="/" exact render={ ({ match }) => <Jumbotron match={match} /> } />
 				<Route path="/websites" exact
 					render={ ({ match }) => <div className="container page">Websites</div> } />
 				
