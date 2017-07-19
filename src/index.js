@@ -16,25 +16,61 @@ import Header from './header/header'
 import Jumbotron from './jumbotron/jumbotron'
 
 // Index
-const Index = props => (
-	<Router>
-		<div className="index">
+class Index extends React.Component {
+  render() {
+    return (
+      <Router>
+        <div className="index">
 
-			<Header />
+          <Header />
 
-			<Switch>
-				
-				<Route path="/" exact render={ ({ match }) => <Jumbotron match={match} /> } />
-				<Route path="/websites" exact
-					render={ ({ match }) => <div className="container page">Websites</div> } />
-				
-				<Route render={ ({ match }) => <div className="container page">Error 404 - page not found</div> } />
-				
-			</Switch>
+          <Switch>
 
-		</div>
-	</Router>
-)
+            <Route path="/" exact
+              render={ ({match}) => (
+                <Jumbotron
+                  match={match} />
+              )} />
+            
+            <Route path="/projects" exact
+              render={ ({match}) => (
+                <div className="page">
+                  <div className="container">
+                    <h1>Projects</h1>
+                  </div>
+                </div>
+              )} />
+            
+            <Route path="/about" exact
+              render={ ({match}) => (
+                <div className="page">
+                  <div className="container">
+                    <h1>About</h1>
+                  </div>
+                </div>
+              )} />
+            
+            <Route path="/contact" exact
+              render={ ({match}) => (
+                <div className="page">
+                  <div className="container">
+                    <h1>Contact</h1>
+                  </div>
+                </div>
+              )} />
+
+            <Route
+              render={ ({match}) => (
+                <div className="container page">Error 404 - page not found</div>
+              )} />
+
+          </Switch>
+
+        </div>
+      </Router>
+    )
+  }
+}
 
 // Render to DOM
 ReactDOM.render(
