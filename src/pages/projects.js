@@ -13,15 +13,18 @@ class Project extends React.Component {
 	
 	render() {
 		const project = this.state.obj
+    
+    let backgroundStyle = { backgroundImage: `url(${project.cover}` }
+    
 		return (
 			<div className="project">
 				
 				<div className="project-cover"
-					style={{ backgroundImage: 'url(' + project.cover + ')' }} />
+					style={backgroundStyle} />
 				
 				<div className="project-info">
-					<h2>{project.title}</h2>
-					<p>{project.desc}</p>
+					<h2><span>{project.title}</span></h2>
+					<p><span>{project.desc}</span></p>
 				</div>
 				
 			</div>

@@ -5,27 +5,46 @@
 	.projects .projects-list {
 		display: block; }
 		.projects .projects-list .project {
-			width: 100%;
+      display: flex;
+      flex-direction: row;
 			box-shadow:
 				rgba(0, 0, 0, 0.16) 0px 3px 10px,
 				rgba(0, 0, 0, 0.23) 0px 3px 10px;
-			margin: 15px; }
-.projects .projects-list .project .project-cover {
-	width: 100%;
-	height: 400px;
-	background-position: left;
-	background-repeat: no-repeat;
-	background-size: cover;
-}
-.projects .projects-list .project .project-info {
-	padding: 20px;
-}
-
-@media (min-width: 992px) {
-	.projects .projects-list {
-		display: flex;
-	}
-	.projects .projects-list .project {
-		width: calc(100% / 2 - 30px);
-		height: auto; }
-}
+			margin: 20px;
+      margin-bottom: 40px; }
+      .projects .projects-list .project .project-cover,
+      .projects .projects-list .project .project-info {
+        width: 50%;
+        height: 300px; }
+      .projects .projects-list .project .project-cover {
+        background-position: left;
+        background-repeat: no-repeat;
+        background-size: cover; }
+      .projects .projects-list .project .project-info {
+        padding: 20px; }
+        .projects .projects-list .project .project-info h2,
+        .projects .projects-list .project .project-info p {
+          overflow: hidden;
+          white-space: nowrap;
+          position: relative;
+          background-color: #fff; }
+          .projects .projects-list .project .project-info h2:after,
+          .projects .projects-list .project .project-info p:after {
+            display: block;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            width: 30px;
+            content: "";
+            background: linear-gradient(to right, rgba(255, 255, 255, 0), white); }
+          .projects .projects-list .project .project-info h2 span,
+          .projects .projects-list .project .project-info p span {
+            font-size: inherit;
+            font-weight: inherit; }
+        .projects .projects-list .project .project-info h2 {
+          font-weight: 700;
+          font-size: 28px; }
+        .projects .projects-list .project .project-info p {
+          font-weight: 400;
+          font-size: 16px; }
