@@ -1,0 +1,31 @@
+.projects {
+	padding: 0; }
+	.page .projects h1 {
+		margin-bottom: 10px; }
+	.projects .projects-list {
+		display: block; }
+		.projects .projects-list .project {
+			width: 100%;
+			box-shadow:
+				rgba(0, 0, 0, 0.16) 0px 3px 10px,
+				rgba(0, 0, 0, 0.23) 0px 3px 10px;
+			margin: 15px; }
+.projects .projects-list .project .project-cover {
+	width: 100%;
+	height: 400px;
+	background-position: left;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.projects .projects-list .project .project-info {
+	padding: 20px;
+}
+
+@media (min-width: 992px) {
+	.projects .projects-list {
+		display: flex;
+	}
+	.projects .projects-list .project {
+		width: calc(100% / 2 - 30px);
+		height: auto; }
+}

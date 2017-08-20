@@ -24,7 +24,7 @@ body {
     height: 90vh; }
     .index .page .container {
       padding: 20px; }
-      .index .page .container h1 {
+      .index .page h1 {
         text-align: center;
         padding: 20px;
         border-bottom: 1px solid #e0e0e0;

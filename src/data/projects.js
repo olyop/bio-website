@@ -1,21 +1,21 @@
 const projectsObj = [
-  {
-    id: '',
-    title: '',
-    desc: '',
-    tags: [
-      ''
-    ],
-    year: '',
-    url: '',
-    githubUrl: '',
-    cover: '',
-    logo: '',
-    hexColors: {
-      primary: '',
-      secondary: ''
-    }
-  },
+//  {
+//    id: '',
+//    title: '',
+//    desc: '',
+//    tags: [
+//      ''
+//    ],
+//    year: '',
+//    url: '',
+//    githubUrl: '',
+//    cover: '',
+//    logo: '',
+//    hexColors: {
+//      primary: '',
+//      secondary: ''
+//    }
+//  },
   {
     id: 'FwSKOeZIsX',
     title: 'Musicloud',
@@ -39,5 +39,31 @@ const projectsObj = [
       primary: '3F51B5',
       secondary: 'E91E63'
     }
+  },
+	{
+    id: 'ZLYIYCETrv',
+    title: 'Game Grid',
+    desc: 'An unoffical NBA schedule viewer.',
+    tags: [
+      'nba',
+			'basketball',
+			'basketball-stats',
+			'react',
+			'javascript',
+			'es6',
+			'game-grid',
+			'single-page-app'
+    ],
+    year: '2016',
+    url: 'http://olyop.github.io/',
+    githubUrl: 'https://github.com/olyop/game-grid',
+    cover: '',
+    logo: '',
+    hexColors: {
+      primary: '#0D47A1',
+      secondary: ''
+    }
   }
 ]
+
+export default projectsObj

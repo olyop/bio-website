@@ -29,7 +29,7 @@
       margin-right: -50%;
       transform: translate(-50%, -50%);
       width: 100vw; }
-      .jumbotron .jumbotron-inner .jumbotron-text h1, h2 {
+      .jumbotron .jumbotron-inner .jumbotron-text h1, .jumbotron .jumbotron-inner .jumbotron-text h2 {
         display: block;
         text-align: center;
         color: #fff;

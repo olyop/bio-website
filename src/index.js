@@ -11,9 +11,16 @@ import './index.css'
 // Import React Router
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
+// Import Data
+import mainObjImport from './data/main'
+import projectsObjImport from './data/projects'
+
 // Import Components
 import Header from './header/header'
 import Jumbotron from './jumbotron/jumbotron'
+
+// Import Pages
+import Projects from './pages/projects'
 
 // Index
 class Index extends React.Component {
@@ -34,29 +41,27 @@ class Index extends React.Component {
             
             <Route path="/projects" exact
               render={ ({match}) => (
-                <div className="page">
-                  <div className="container">
-                    <h1>Projects</h1>
-                  </div>
-                </div>
+                <PageContainer>
+									
+									<Projects
+										mainObj={this.props.mainObj}
+										projectsObj={this.props.projectsObj} />
+									
+								</PageContainer>
               )} />
             
             <Route path="/about" exact
               render={ ({match}) => (
-                <div className="page">
-                  <div className="container">
-                    <h1>About</h1>
-                  </div>
-                </div>
+                <PageContainer>
+									<h1>Projects</h1>
+								</PageContainer>
               )} />
             
             <Route path="/contact" exact
               render={ ({match}) => (
-                <div className="page">
-                  <div className="container">
-                    <h1>Contact</h1>
-                  </div>
-                </div>
+                <PageContainer>
+									<h1>Projects</h1>
+								</PageContainer>
               )} />
 
             <Route
@@ -72,8 +77,16 @@ class Index extends React.Component {
   }
 }
 
+const PageContainer = props => (
+	<div className="page">
+		<div className="container">
+			{props.children}
+		</div>
+	</div>
+)
+
 // Render to DOM
 ReactDOM.render(
-  <Index />,
+  <Index mainObj={mainObjImport} projectsObj={projectsObjImport} />,
   document.getElementById('root')
 )
